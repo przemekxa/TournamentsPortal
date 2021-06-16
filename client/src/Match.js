@@ -41,6 +41,7 @@ export default function Match({amatch, user, update}) {
       flexDirection: 'column',
       minWidth: '300px',
       width: '100%',
+      margin: '8px 0',
     }}>
       <Card.Body>
         <div style={{

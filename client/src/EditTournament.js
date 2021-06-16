@@ -115,7 +115,7 @@ export default function EditTournament({user}) {
   let existingLogos = tournament.logos?.map((logo, idx) =>
   <tr key={idx}>
     <td>{idx + 1}</td>
-    <td>?</td>
+    <td>{logo.id} ({logo.filename})</td>
     <td>
       <Image
         src={url + 'logo/' + logo.filename}
