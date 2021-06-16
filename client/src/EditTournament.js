@@ -41,7 +41,6 @@ export default function EditTournament({user}) {
       let data = await getTournament(id);
       setPosition({lat: data.latitude, lng: data.longitude})
       setTournament(data);
-      console.log('editing tournament:', data)
     } catch(error) {
       history.push('/notFound');
     }
@@ -61,7 +60,6 @@ export default function EditTournament({user}) {
   // Update the tournament
 
   const onSubmit = async (data) => {
-    console.log('ONSUBMIT', data);
     setUnknownError(null);
 
     var today = new Date();
@@ -100,7 +98,6 @@ export default function EditTournament({user}) {
       }
       history.push(`/tournament/${tournament.id}`)
     } catch ({ response }) {
-      console.log("RESPonse", response)
       if(response?.data && typeof response?.data === 'object') {
         setUnknownError(null)
         Object.keys(response.data).forEach(key => {
